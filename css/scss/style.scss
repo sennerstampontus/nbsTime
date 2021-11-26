@@ -1,0 +1,47 @@
+@import "./variables";
+@import "./utilities";
+
+#time{
+    font-size: 2.5rem;
+    font-weight: $bold;
+        
+    @include desktop{
+        font-size: 4rem;
+    }
+}
+
+#selectArray{
+    outline: none;
+    
+}
+
+#timeZones{
+    padding: 0.5rem 0;
+    text-align: center;
+    background: $selectbg-color;
+    font-family: $primary-font;
+    font-weight: $regular;
+    border-radius: 7px;
+    color: $primary-text-color;
+    border: none;
+    cursor: pointer;
+}
+
+
+#timeZones::-webkit-scrollbar-track
+{
+	background-color: $background-color;
+}
+
+#timeZones::-webkit-scrollbar
+{
+	width: 7px;
+	background-color: #F5F5F5;
+}
+
+#timeZones::-webkit-scrollbar-thumb
+{
+	background-color: $primary-text-color;
+	border: none;
+    border-radius: 10px;
+}

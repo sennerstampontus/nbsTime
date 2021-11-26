@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&display=swap');
+
+//Fonts
+$primary-font: 'Roboto', sans-serif;
+$secondary-font: 'Poppins', sans-serif;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+//
+
+//Colors
+$primary-text-color: #ACBFA4;
+$secondary-text-color: #E2E8CE;
+$numbers-pink:  #F23779;
+$date-orange: #FF6803;
+$gradient-startcolor: #EE307A;
+$gradient-endcolor:  #FC8B53;
+$box-color: #414149;
+$lightblue: #F8F9FE;
+$lightgray: #d0d2d6;
+$background-color: #262626;
+$selectbg-color: #3a3a3a;
+$gradientcolor: linear-gradient(to right, $gradient-startcolor , $gradient-endcolor);
+//
+
+//Breakpoints
+$breakpoint-mobile: 375px;
+$breakpoint-mobile-max: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-tablet-max: 720px;
+$breakpoint-tablet-ls: 1024px;
+$breakpoint-tablet-ls-max: 996px;
+$breakpoint-desktop: 1200px;
+$breakpoint-desktop-max: 1170px;
+//
+//Grid area
+$grid-template-ls: 
+'navbar navbar' 'showcase showcase' 'content content' 'process process' 'contact contact' 'latest latest' 'readmore readmore';
+
+$grid-template:
+'navbar' 'showcase' 'content' 'process' 'contact' 'latest' 'readmore';
+
+
+
+@import "./breakpoints";
