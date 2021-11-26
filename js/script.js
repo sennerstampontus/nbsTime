@@ -372,9 +372,9 @@ select.addEventListener("change", function(){
     
     let isSelected = select.options[select.selectedIndex].value;
     nd = new Date();
-    let isTime = toLocaleString('en-US',{timeZone: isSelected, timeZoneName:'short'});
+    let isTime = nd.toLocaleString('en-GB',{timeZone: isSelected, timeZoneName:'short'});
     showTime(isTime, isSelected);
-    console.log(select);
+    console.log(isTime);
 });
 
 
@@ -385,7 +385,6 @@ select.addEventListener("change", function(){
 
 
 function showTime(time, myZone) {
-
 
     // let myDate = new Date().toLocaleString('en-US',{timeZoneName:'short'});
     // let time = myDate.split(' ')[3];
@@ -413,10 +412,12 @@ function showTime(time, myZone) {
     // let seconds = ("0" + sliceSeconds).slice(-2);
 
     // let timeNow = `${hours} : ${minutes} : ${seconds}`;
+    
     clock.innerText = `0${time.toLocaleString('en-GB',{timeZone: myZone, timeZoneName:'short'}).split(' ')[1]}`.slice(-8);
-    currentDate.innerText = `${time.toLocaleString('en-US',{timeZone: myZone, timeZoneName:'short'}).split(',')[0]}`;
-    currentTimezone.innerText = `${time.toLocaleString('en-US',{timeZone: myZone, timeZoneName:'short'}).split(' ')[3]}`
+    currentDate.innerText = `${time.toLocaleString('en-GB',{timeZone: myZone, timeZoneName:'short'}).split(',')[0]}`;
+    currentTimezone.innerText = `${time.toLocaleString('en-GB',{timeZone: myZone, timeZoneName:'short'}).split(' ')[3]}`
 
 
     console.log(time);
 }
+
