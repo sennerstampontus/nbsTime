@@ -372,24 +372,27 @@ select.addEventListener("change", function(){
     
     let isSelected = select.options[select.selectedIndex].value;
     nd = new Date();
-    let isTime = nd.toLocaleString('en-GB',{timeZone: isSelected, timeZoneName:'short'});
-    showTime(isTime, isSelected);
-    console.log(isTime);
+    showTime(isSelected);
+    // console.log(isTime, isSelected);
 });
 
-
-
-
-
-
-function showTime(time, myZone) {
-
-    clock.innerText = `0${time.toLocaleString('en-GB',{timeZone: myZone, timeZoneName:'short'}).split(' ')[1]}`.slice(-8);
-    currentDate.innerText = `${time.toLocaleString('en-GB',{timeZone: myZone, timeZoneName:'short'}).split(',')[0]}`;
-    currentTimezone.innerText = `${time.toLocaleString('en-GB',{timeZone: myZone, timeZoneName:'short'}).split(' ')[3]}`
-
-    console.log(time);
+let checkSelected = (zoneSelected) =>{
+    
+    let patchZone = zoneSelected;
+    console.log(patchZone);
 }
+
+
+
+function showTime(time) {
+    nd = new Date();
+    clock.innerText = `0${nd.toLocaleString('en-GB',{timeZone: time, timeZoneName:'short'}).split(' ')[1]}`.slice(-8);
+    currentDate.innerText = `${nd.toLocaleString('en-GB',{timeZone: time, timeZoneName:'short'}).split(',')[0]}`;
+    currentTimezone.innerText = `${nd.toLocaleString('en-GB',{timeZone: time, timeZoneName:'short'}).split(' ')[2]}`
+    setInterval(showTime, 1000);
+}
+
+
 
 
 
